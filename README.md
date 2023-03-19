@@ -1,3 +1,3 @@
 # Momentum
 
-Cloning the Chrome extension Momentum with JavaScript
+Cloning the Chrome extension [Momentum](https://momentumdash.com/) with JavaScript
