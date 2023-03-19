@@ -4,13 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>Momentum</title>
     </head>
     <body>
-        <div>
-            <input type="text" placeholder="Please write your name!" />
-            <button>Login</button>
-        </div>
+        <form>
+            <input type="text" placeholder="Please write your name!" maxlength="15" required />
+            <input type="submit" value="Login" />
+        </form>
+        <h1 class="hidden"></h1>
         <script src="app.js"></script>
     </body>
 </html>

@@ -1,5 +1,11 @@
+const loginForm = document.querySelector("form");
 const loginInput = document.querySelector("input");
-const loginButton = document.querySelector("button");
-loginButton.addEventListener("click", () => {
-    console.log(loginInput.value);
+const profileMessage = document.querySelector("h1");
+const HIDDEN_CLASS_NAME = "hidden";
+loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const username = loginInput.value;
+    loginForm.classList.add(HIDDEN_CLASS_NAME);
+    profileMessage.innerText = `Hello ${username}!`;
+    profileMessage.classList.remove(HIDDEN_CLASS_NAME);
 });
