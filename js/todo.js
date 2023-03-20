@@ -5,8 +5,15 @@ const todoList = document.querySelector("ul");
 function paintTodo(newTodo) {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    li.appendChild(span);
+    const button = document.createElement("button");
     span.innerText = newTodo;
+    button.innerText = "❎";
+    button.addEventListener("click", (event) => {
+        const li = event.target.parentElement;
+        li.remove();
+    });
+    li.appendChild(span);
+    li.appendChild(button);
     todoList.appendChild(li);
 }
 todoForm.addEventListener("submit", (event) => {
