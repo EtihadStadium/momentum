@@ -16,10 +16,15 @@ function paintTodo(newTodo) {
         const li = event.target.parentElement;
         console.log(li.id);
         li.remove();
+        savedTodo = savedTodo.filter((item) => item.id !== parseInt(li.id));
+        saveTodo();
     });
     li.appendChild(span);
     li.appendChild(button);
     todoList.appendChild(li);
+}
+function saveTodo() {
+    localStorage.setItem(TODO_KEY, JSON.stringify(savedTodo));
 }
 todoForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -32,11 +37,10 @@ todoForm.addEventListener("submit", (event) => {
     };
     savedTodo.push(newTodoObj);
     paintTodo(newTodoObj);
-    localStorage.setItem(TODO_KEY, JSON.stringify(savedTodo));
+    saveTodo();
 });
 if (savedTodos !== null) {
     const parsedTodo = JSON.parse(savedTodos);
-    parsedTodo.forEach((item) => {
-        console.log(item);
-    });
+    savedTodo = parsedTodo;
+    parsedTodo.forEach(paintTodo);
 }
