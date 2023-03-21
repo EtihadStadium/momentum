@@ -2,6 +2,7 @@ const todoForm = document.getElementById("todo-form");
 const todoInput = document.querySelector("#todo-form input");
 const todoEnter = document.getElementById("todo-enter");
 const todoList = document.querySelector("ul");
+const savedTodo = [];
 function paintTodo(newTodo) {
     const li = document.createElement("li");
     const span = document.createElement("span");
@@ -21,5 +22,7 @@ todoForm.addEventListener("submit", (event) => {
     const newTodo = todoInput.value;
     todoInput.value = "";
     todoInput.focus();
+    savedTodo.push(newTodo);
     paintTodo(newTodo);
+    localStorage.setItem("todo", JSON.stringify(savedTodo));
 });
