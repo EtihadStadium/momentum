@@ -4,8 +4,12 @@ const profileMessage = document.getElementById("profile-message");
 const HIDDEN_CLASS_NAME = "hidden";
 const USERNAME_KEY = "username";
 const savedUsername = localStorage.getItem(USERNAME_KEY);
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 function paintProfileMessage(username) {
-    profileMessage.innerText = `Hello ${username}!`;
+    const capitalizedUsername = capitalizeFirstLetter(username);
+    profileMessage.innerText = `Hello ${capitalizedUsername}!`;
     profileMessage.classList.remove(HIDDEN_CLASS_NAME);
 }
 if (savedUsername === null) {
