@@ -6,11 +6,19 @@ function onGeoOk(position) {
     const longitude = position.coords.longitude;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
     fetch(url)
-        .then((response) => response.json())
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("API request failed!");
+            }
+            return response.json();
+        })
         .then((data) => {
             weather.innerText = `${data.weather[0].main}, ${data.main.temp.toFixed(1)}° - ${data.name}`;
+        })
+        .catch((error) => {
+            console.error(error);
+            alert("Failed to load weather information!");
         });
-    console.log(API_KEY);
 }
 function onGeoError() {
     alert("No weather information!");
