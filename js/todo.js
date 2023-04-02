@@ -11,7 +11,7 @@ function paintTodo(newTodo) {
     const button = document.createElement("button");
     li.id = newTodo.id;
     span.innerText = newTodo.text;
-    button.innerText = "❎";
+    button.innerText = "X";
     button.addEventListener("click", (event) => {
         const li = event.target.parentElement;
         console.log(li.id);
