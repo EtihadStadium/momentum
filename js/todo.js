@@ -19,8 +19,8 @@ function paintTodo(newTodo) {
         savedTodo = savedTodo.filter((item) => item.id !== parseInt(li.id));
         saveTodo();
     });
-    li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(span);
     todoList.appendChild(li);
 }
 function saveTodo() {
