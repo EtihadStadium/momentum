@@ -1,10 +1,165 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Layout */
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
+}
+/* Background */
+html {
+    background: #444444;
+}
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+/* Lists */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 30px;
+}
+li {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 22px;
+    opacity: 0.8;
+    color: white;
+}
+li:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+li button {
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    appearance: none;
+}
+/* Animation */
+body {
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+/* User Select */
+* {
+    user-select: none;
 }
 .hidden {
     display: none;
+}
+.login-class {
+    margin-bottom: 10px;
+}
+/* Forms */
+#login-input,
+#todo-input {
+    font-size: 2em;
+    color: white;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid white;
+    margin-right: 8px;
+    opacity: 0.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    appearance: none;
+}
+#login-input:focus,
+#login-input:active,
+#todo-input:focus,
+#todo-input:active {
+    outline: none;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in;
+}
+#login-input::placeholder,
+#todo-input::placeholder {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+#login-submit,
+#todo-submit {
+    font-size: 2em;
+    color: white;
+    background: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    appearance: none;
+}
+#login-submit:hover,
+#todo-submit:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+/* Components */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#clock {
+    font-size: 13em;
+    color: white;
+    opacity: 0.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+#profile-message {
+    font-size: 2.5em;
+    color: white;
+    opacity: 0.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+#weather {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: white;
+    opacity: 0.7;
+    font-size: 16px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in;
+}
+#weather:hover {
+    opacity: 1;
+}
+#information {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    opacity: 0.7;
+    font-size: 16px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in;
+}
+#information:hover {
+    opacity: 1;
 }

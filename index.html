@@ -3,25 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
         <link rel="stylesheet" href="style.css" />
         <title>Momentum</title>
     </head>
     <body>
-        <h2 id="clock"></h2>
-        <div>
-            <form id="login-form" class="hidden">
-                <input type="text" id="login-input" placeholder="Please write your name!" maxlength="15" required />
-                <input type="submit" id="login-submit" value="Login" />
-            </form>
-            <h1 id="profile-message" class="hidden"></h1>
-        </div>
-        <div>
-            <form id="todo-form">
-                <input type="text" id="todo-input" placeholder="Write down your to-dos!" required />
-                <input type="submit" id="todo-submit" value="Enter" />
-            </form>
-            <ul></ul>
+        <div class="center">
+            <h2 id="clock"></h2>
+            <div class="login-class">
+                <form id="login-form" class="hidden">
+                    <input type="text" id="login-input" placeholder="Please write your name!" maxlength="15" required />
+                    <input type="submit" id="login-submit" value="Login" />
+                </form>
+                <h1 id="profile-message" class="hidden"></h1>
+            </div>
+            <div>
+                <form id="todo-form">
+                    <input type="text" id="todo-input" placeholder="Write down your to-dos!" required />
+                    <input type="submit" id="todo-submit" value="Enter" />
+                </form>
+                <ul></ul>
+            </div>
         </div>
         <div>
             <div id="weather">
