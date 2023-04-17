@@ -35,3 +35,15 @@ Cloning the Chrome extension [Momentum](https://momentumdash.com/) with JavaScri
 [Unsplash](https://unsplash.com/)에서 제공하는 [API](https://unsplash.com/documentation)를 이용하여 풍경 사진을 랜덤으로 불러옵니다.  
 불러온 사진을 `backgroundImage`로 설정하고, 왼쪽 하단에 사진에 대한 간단한 설명과 사진작가의 이름을 출력합니다.  
 API로부터 사진을 불러오는데 실패한 경우 `getRandomGradient()` 함수 및 `getRandomColor()` 함수를 통해 대체 배경색을 설정합니다.
+
+<p></p><br>
+
+---
+
+<br>
+<div align="center">
+<p>Momentum</p>
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FEtihadStadium%2Fmomentum&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+</div><br>
